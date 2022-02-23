@@ -1,0 +1,106 @@
+.quote {
+  padding: 25px 10px;
+  text-align: start;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+@media (max-width: 767px) {
+  .quote {
+    width: 95%;
+  }
+}
+
+.quote:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.quote .quote-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quote .quote-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: end;
+  margin-right: 40px;
+}
+
+@media (max-width: 564px) {
+  .quote .quote-info {
+    margin-right: 20px;
+  }
+}
+
+.quote-text h3 {
+  font-size: 22px;
+  color: #000;
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .quote-text h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 564px) {
+  .quote-text h3 {
+    font-size: 16px;
+  }
+}
+
+.quote-info .quote-author {
+  position: relative;
+  font-weight: 600;
+  font-size: 16px;
+  color: #008066;
+  cursor: pointer;
+}
+
+@media (max-width: 564px) {
+  .quote-info .quote-author {
+    font-size: 14px;
+  }
+}
+
+.quote-info .quote-author::before {
+  position: absolute;
+  content: "";
+  bottom: 7px;
+  left: -30px;
+  height: 3px;
+  width: 22px;
+  background: #008066;
+  border-radius: 10px;
+}
+
+.quote-info .quote-series {
+  font-size: 15px;
+  color: #00997a;
+}
+
+@media (max-width: 564px) {
+  .quote-info .quote-series {
+    font-size: 13px;
+  }
+}
+
+.series-data {
+  margin-top: 80px;
+  gap: 40px;
+}
+
+@media (max-width: 564px) {
+  .series-data {
+    margin-top: 40px;
+    margin-bottom: 0;
+    gap: 30px;
+  }
+}

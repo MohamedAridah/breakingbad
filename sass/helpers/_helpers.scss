@@ -1,0 +1,368 @@
+.main-wrapper {
+  width: 95%;
+  margin: $main-margin auto;
+  margin-bottom: $main-margin - 20px;
+  padding: 30px 0;
+
+  @media (max-width: 564px) {
+    padding: 0;
+  }
+}
+
+.series-data {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+  gap: 20px;
+  margin-top: $main-margin;
+
+  @media (max-width: 564px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 435px) {
+    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  }
+
+  @media (max-width: 370px) {
+    justify-content: center;
+    grid-template-columns: 0.88fr;
+  }
+}
+
+.click-effect:active {
+  transform: scale(0.88);
+  transition: $main-transition;
+}
+
+.no-grid {
+  grid-template-columns: auto !important;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: $main-color;
+    text-transform: capitalize;
+
+    @media (max-width: 564px) {
+      font-size: 26px;
+    }
+
+    @media (max-width: 280px) {
+      font-size: 21px;
+    }
+  }
+}
+
+.subtitle {
+  h3 {
+    color: $light-main-color;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.choose-method {
+  @include flex(flex-end, null, null);
+  @media (max-width: 320px) {
+    justify-content: center;
+  }
+
+  ul {
+    list-style: none;
+    @include flex(null, null, null);
+    border-radius: 25px;
+    background: #cce7ff;
+    cursor: pointer;
+    overflow: hidden;
+
+    li {
+      text-transform: capitalize;
+      color: rgb(6, 89, 160);
+      padding: 10px;
+      margin: 0 0.5px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 15px;
+      transition: $main-transition;
+
+      @media (max-width: 564px) {
+        padding: 7px 10px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 320px) {
+        padding: 5px 8px;
+        font-size: 12px;
+      }
+
+      &:hover,
+      &.active {
+        background-color: #a3d4ff;
+      }
+      &:first-child {
+        padding-left: 20px;
+      }
+
+      &:last-child {
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+.series-wrapper {
+  &.fold {
+    .series-seasons {
+      height: 0;
+      transform: scaleY(0);
+    }
+
+    .icon {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.season {
+  margin-bottom: 30px;
+
+  .season-episodes {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+    gap: 20px;
+    transform-origin: top;
+    transition: $main-transition transform;
+
+    @media (max-width: 435px) {
+      grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+    }
+
+    @media (max-width: 370px) {
+      justify-content: center;
+      grid-template-columns: 0.9fr;
+    }
+  }
+
+  &.fold {
+    margin-bottom: 10px;
+
+    .season-episodes {
+      height: 0;
+      transform: scaleY(0);
+    }
+
+    .icon {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.title {
+  @include flex(null, center, null);
+  column-gap: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 767px) {
+    column-gap: 4px;
+  }
+
+  .icon {
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    transition: $fast-transition transform;
+
+    @media (max-width: 400px) {
+      font-size: 21px;
+    }
+  }
+
+  h2 {
+    text-transform: capitalize;
+    font-size: 27px;
+    font-weight: 500;
+    color: $main-color;
+
+    @media (max-width: 767px) {
+      & {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      & {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.series-title {
+  margin-bottom: 30px;
+  @media (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+
+    @media (max-width: 767px) {
+      & {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      & {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      & {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.message {
+  min-height: 90px;
+  max-width: 90%;
+  margin: $main-margin auto;
+  @include flex(null, center, column);
+
+  @media (max-width: 450px) {
+    max-width: 100%;
+  }
+
+  &.data {
+    .message-description {
+      color: #000;
+    }
+  }
+
+  .icon-wrapper {
+    width: 100px;
+    height: 100px;
+    background: hsl(208, 100%, 98%);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+
+    @media (max-width: 499px) {
+      width: 75px;
+      height: 75px;
+    }
+
+    .illustration {
+      color: $light-main-color;
+      font-size: 70px;
+    }
+
+    .image {
+      width: 70px;
+
+      @media (max-width: 499px) {
+        width: 50px;
+      }
+    }
+  }
+
+  .message-description {
+    margin: 10px 0 15px 0;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: $light-main-color;
+
+    @media (max-width: 499px) {
+      font-size: 16px;
+    }
+  }
+
+  .message-details {
+    margin-bottom: 15px;
+
+    p {
+      text-transform: capitalize;
+      margin-bottom: 5px;
+    }
+
+    li {
+      position: relative;
+      margin: 0 0 3px 15px;
+      list-style-type: none;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translatey(-50%);
+        left: -20px;
+        border: 6px solid transparent;
+        border-left-color: $light-main-color;
+      }
+    }
+  }
+
+  button {
+    .image {
+      width: 25px;
+      height: 22px;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  list-style: none;
+
+  a {
+    display: grid;
+    place-items: center;
+
+    .social-icon {
+      font-size: 27px;
+      color: #fff;
+      transition: $main-transition;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  // outline: none;
+  outline-offset: 3px;
+  outline-color: #008066;
+}
+html {
+  font-size: $font-size;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $font-family, sans-serif, Arial, Helvetica;
+  line-height: 1.5;
+  min-height: 100vh;
+  @include flex(null, null, column);
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}

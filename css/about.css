@@ -1,0 +1,119 @@
+.container {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.point {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+  .point {
+    width: 90%;
+  }
+}
+
+.point::before, .point::after {
+  position: absolute;
+  content: "";
+  background-color: #00997a;
+}
+
+.point::before {
+  left: -20px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+}
+
+.point::after {
+  bottom: 0;
+  left: -20px;
+  width: 25%;
+  height: 2px;
+}
+
+@media (max-width: 992px) {
+  .point::after {
+    width: 60%;
+  }
+}
+
+.point .title {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 600;
+  cursor: default;
+  color: #00997a;
+}
+
+@media (max-width: 767px) {
+  .point .title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .point .title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 300px) {
+  .point .title {
+    font-size: 20px;
+  }
+}
+
+.point .description {
+  line-height: 1.9;
+}
+
+@media (max-width: 400px) {
+  .point .description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 300px) {
+  .point .description {
+    font-size: 14px;
+  }
+}
+
+.point .description + p {
+  margin: 15px 0;
+}
+
+.point strong {
+  color: #00997a;
+}
+
+.point .social {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.point .social .social-icon {
+  color: #000;
+}
+
+.outer-link {
+  position: relative;
+  font-weight: 600;
+  color: #00997a;
+  transition: 0.3s ease;
+}
+
+.outer-link:hover {
+  color: #004d3d;
+}
+
+.outer-link:visited {
+  color: #004d3d;
+}

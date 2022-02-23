@@ -1,0 +1,41 @@
+.card .episode-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 50px;
+  height: 45px;
+  border-radius: 0 0 10px 0;
+  display: grid;
+  place-items: center;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  z-index: 99;
+}
+
+@media (max-width: 500px) {
+  .card .episode-number {
+    width: 45px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+.brief-info .card-title {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+
+@media (max-width: 435px) {
+  .brief-info .card-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 370px) {
+  .series-data {
+    justify-content: initial;
+  }
+}

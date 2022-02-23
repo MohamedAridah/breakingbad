@@ -1,0 +1,53 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+.slider-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  @include flex(space-between, null, null);
+
+  @media (max-width: 767px) {
+    & {
+      display: none;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    width: 35px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 3.6vw;
+    color: $light-main-color;
+    cursor: pointer;
+    @include flex(center, center, null);
+    transition: $main-transition ease;
+
+    &:hover {
+      color: $main-color;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+    }
+
+    ion-icon:active {
+      transform: scale(0.7);
+      transition: $main-transition;
+    }
+  }
+
+  .arrow-prev {
+    left: 0;
+    transform: translateX(-80%);
+  }
+
+  .arrow-next {
+    right: 0;
+    transform: translateX(80%);
+  }
+}

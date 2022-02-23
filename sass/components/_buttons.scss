@@ -1,0 +1,87 @@
+@import "../helpers/variables";
+.btn {
+  display: inline-block;
+  padding: 6px 18px;
+  font-size: $font-size; /// 16px
+  background: none;
+  outline: none;
+  user-select: none;
+  text-align: center;
+  cursor: pointer;
+  z-index: 99;
+  text-transform: capitalize;
+  border: 1px solid transparent;
+  border-radius: $border-radius - 4; /// 6px
+  transition: $main-transition; /// .3s
+
+  @media (max-width: 564px) {
+    padding: 5px 15px;
+    font-size: 15px;
+  }
+}
+
+.buttons-wrapper {
+  display: flex;
+  column-gap: 15px;
+  margin-top: 15px;
+
+  &.wrapper-end {
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 564px) {
+    & {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.btn-default {
+  color: #fff;
+  background: $main-color;
+  border-color: $main-color;
+
+  &:hover {
+    $hover-color: $dark-main-color;
+    background-color: $hover-color;
+    border-color: $hover-color;
+  }
+}
+
+.btn-secondary {
+  color: #fff;
+  background: hsl(208, 100%, 50%);
+  border-color: hsl(208, 100%, 50%);
+
+  &.outline {
+    color: hsl(208, 100%, 50%);
+    background: #fff;
+    border-color: hsl(208, 100%, 50%);
+
+    &:hover {
+      color: #fff;
+      background: hsl(208, 100%, 45%);
+    }
+  }
+
+  &:hover {
+    background: hsl(208, 100%, 45%);
+  }
+}
+
+.btn-search {
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+
+.btn-plus-icon {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-weight: 600;
+
+  .icon {
+    font-size: 21px;
+    --ionicon-stroke-width: 70px;
+  }
+}
