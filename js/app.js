@@ -1352,6 +1352,18 @@ async function touchEffect() {
 }
 touchEffect();
 
+// Add Meta Tag For Mobil Devices [theme-color]
+// WHY This Function. Because I Forget To Add It To Html Directly & There Are 6 Pages. Too Much Work,Right?. So One Function Will Do The Job.
+function addMeta() {
+  let head = document.querySelector("head");
+  let title = head.querySelector("title");
+  let meta = document.createElement("meta");
+  meta.setAttribute("name", "theme-color");
+  meta.setAttribute("content", "#00997a");
+  head.insertBefore(meta, title);
+}
+addMeta();
+
 /*
     Search Functionality
 */
